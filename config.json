@@ -1,0 +1,6 @@
+{
+	"modelPackage": "com.mallorcasoftware.radiococlient.model",
+	"apiPackage": "com.mallorcasoftware.radiococlient.api",
+	"groupId": "com.mallorcasoftware",
+	"artifactId": "radiococlient"
+}
