@@ -32,14 +32,14 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * CurrentTrackDto
+ * HistoryTrackDto
  */
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-14T16:37:23.553+02:00")
-public class CurrentTrackDto   {
+public class HistoryTrackDto   {
   @SerializedName("title")
   private String title = null;
 
-  public CurrentTrackDto title(String title) {
+  public HistoryTrackDto title(String title) {
     this.title = title;
     return this;
   }
@@ -66,8 +66,8 @@ public class CurrentTrackDto   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CurrentTrackDto currentTrackDto = (CurrentTrackDto) o;
-    return Objects.equals(this.title, currentTrackDto.title);
+    HistoryTrackDto historyTrackDto = (HistoryTrackDto) o;
+    return Objects.equals(this.title, historyTrackDto.title);
   }
 
   @Override
@@ -78,7 +78,7 @@ public class CurrentTrackDto   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CurrentTrackDto {\n");
+    sb.append("class HistoryTrackDto {\n");
     
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("}");

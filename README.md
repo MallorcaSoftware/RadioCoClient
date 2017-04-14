@@ -73,10 +73,10 @@ public class DefaultApiExample {
         DefaultApi apiInstance = new DefaultApi();
         String stationId = "stationId_example"; // String | Given station id
         try {
-            StationStatusDto result = apiInstance.stationsStationIdStatusGet(stationId);
+            StationStatusDto result = apiInstance.getStatus(stationId);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#stationsStationIdStatusGet");
+            System.err.println("Exception when calling DefaultApi#getStatus");
             e.printStackTrace();
         }
     }
@@ -90,12 +90,13 @@ All URIs are relative to *http://public.radio.co/*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**stationsStationIdStatusGet**](docs/DefaultApi.md#stationsStationIdStatusGet) | **GET** /stations/{stationId}/status | 
+*DefaultApi* | [**getStatus**](docs/DefaultApi.md#getStatus) | **GET** /stations/{stationId}/status | 
 
 
 ## Documentation for Models
 
  - [CurrentTrackDto](docs/CurrentTrackDto.md)
+ - [HistoryTrackDto](docs/HistoryTrackDto.md)
  - [StationStatusDto](docs/StationStatusDto.md)
 
 

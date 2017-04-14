@@ -28,14 +28,17 @@ package com.mallorcasoftware.radiococlient.model;
 import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 import com.mallorcasoftware.radiococlient.model.CurrentTrackDto;
+import com.mallorcasoftware.radiococlient.model.HistoryTrackDto;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * StationStatusDto
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-11T00:39:57.746+01:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-14T16:37:23.553+02:00")
 public class StationStatusDto   {
   @SerializedName("status")
   private String status = null;
@@ -45,6 +48,9 @@ public class StationStatusDto   {
 
   @SerializedName("current_track")
   private CurrentTrackDto currentTrack = null;
+
+  @SerializedName("history")
+  private List<HistoryTrackDto> history = new ArrayList<HistoryTrackDto>();
 
   public StationStatusDto status(String status) {
     this.status = status;
@@ -100,6 +106,29 @@ public class StationStatusDto   {
     this.currentTrack = currentTrack;
   }
 
+  public StationStatusDto history(List<HistoryTrackDto> history) {
+    this.history = history;
+    return this;
+  }
+
+  public StationStatusDto addHistoryItem(HistoryTrackDto historyItem) {
+    this.history.add(historyItem);
+    return this;
+  }
+
+   /**
+   * Get history
+   * @return history
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public List<HistoryTrackDto> getHistory() {
+    return history;
+  }
+
+  public void setHistory(List<HistoryTrackDto> history) {
+    this.history = history;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -112,12 +141,13 @@ public class StationStatusDto   {
     StationStatusDto stationStatusDto = (StationStatusDto) o;
     return Objects.equals(this.status, stationStatusDto.status) &&
         Objects.equals(this.logoUrl, stationStatusDto.logoUrl) &&
-        Objects.equals(this.currentTrack, stationStatusDto.currentTrack);
+        Objects.equals(this.currentTrack, stationStatusDto.currentTrack) &&
+        Objects.equals(this.history, stationStatusDto.history);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(status, logoUrl, currentTrack);
+    return Objects.hash(status, logoUrl, currentTrack, history);
   }
 
   @Override
@@ -128,6 +158,7 @@ public class StationStatusDto   {
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    logoUrl: ").append(toIndentedString(logoUrl)).append("\n");
     sb.append("    currentTrack: ").append(toIndentedString(currentTrack)).append("\n");
+    sb.append("    history: ").append(toIndentedString(history)).append("\n");
     sb.append("}");
     return sb.toString();
   }

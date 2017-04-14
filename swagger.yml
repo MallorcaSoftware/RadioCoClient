@@ -52,6 +52,12 @@ definitions:
     properties:
       title:
         type: string
+
+  HistoryTrackDto:
+    type: object
+    properties:
+      title:
+        type: string
       
   StationStatusDto:
     type: object
@@ -62,3 +68,7 @@ definitions:
         type: string
       current_track:
         $ref: '#/definitions/CurrentTrackDto'
+      history:
+        type: array
+        items:
+          $ref: '#/definitions/HistoryTrackDto'
