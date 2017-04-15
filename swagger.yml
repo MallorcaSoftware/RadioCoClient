@@ -1,9 +1,5 @@
-# Example YAML to get you started quickly.
-# Be aware that YAML has indentation based scoping.
-# Code completion support is available so start typing for available options.
 swagger: '2.0'
 
-# This is your document metadata
 info:
   version: "0.0.1"
   title: radio.co Client
@@ -17,32 +13,22 @@ consumes:
 produces:
   - application/json
 
-# Describe your paths here
 paths:
-  # This is a path endpoint. Change it.
   /stations/{stationId}/status:
-    # This is a HTTP operation
     get:
       operationId: getStatus
-      # Describe this verb here. Note: you can use markdown
       description: |
         Gets Status of the given station
-      # This is array of GET operation parameters:
       parameters:
-        # An example parameter that is in query and is required
         -
           name: stationId
           in: path
           description: Given station id
           required: true
           type: string
-      # Expected responses for this operation:
       responses:
-        # Response code
         200:
           description: Successful response
-          # A schema describing your response object.
-          # Use JSON Schema format
           schema:
             $ref: '#/definitions/StationStatusDto'
               
